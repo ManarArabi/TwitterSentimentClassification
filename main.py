@@ -2,6 +2,8 @@ from data_preprocessing import preprocessing
 from features_extraction import featureExtraction
 from back_propagation import BP
 from lda import LDA
+from qda import QDA
+from svm import SVM
 
 def main():
 

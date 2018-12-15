@@ -1,0 +1,22 @@
+from sklearn import svm
+
+
+class SVM(object):
+
+    clf = None
+
+    def __init__(self, kernelF = 'rbf'):
+        #kernel = {‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’} defualt =rbf
+        self.clf = svm.SVC(gamma='scale', kernel=kernelF)
+        return
+
+    def train(self, x, y):
+        self.clf.fit(x, y)
+
+    def test(self, x):
+        y = self.clf.predict(x)
+        return y
+
+    def get_accuracy(self, test_data, test_res):
+        acc = self.clf.score(test_data, test_res)
+        return acc

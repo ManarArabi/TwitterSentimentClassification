@@ -5,7 +5,7 @@ class BP(object):
 
     clf = None
 
-    def __init__(self, activationF):
+    def __init__(self, activationF = 'identity'):
         #solver = {‘lbfgs’, ‘sgd’, ‘adam’}
         #activationF = {‘identity’, ‘logistic’, ‘tanh’}
         #default is : 100 neuron with one hidden layer
