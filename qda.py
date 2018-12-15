@@ -1,7 +1,7 @@
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
 
-class QDA:
+class QDA(object):
     clf = None
 
     def __init__(self):

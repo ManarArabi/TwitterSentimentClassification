@@ -1,7 +1,7 @@
 from sklearn.neural_network import MLPClassifier
 
 
-class BP:
+class BP(object):
 
     clf = None
 

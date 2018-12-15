@@ -1,7 +1,7 @@
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 
-class LDA:
+class LDA(object):
     clf = None
 
     def __init__(self):
@@ -15,6 +15,6 @@ class LDA:
         res = self.clf.predict(x)
         return res
 
-    def get_accuracy (self, test_data, test_res):
+    def get_accuracy(self, test_data, test_res):
         acc = self.clf.score(test_data, test_res)
         return acc
