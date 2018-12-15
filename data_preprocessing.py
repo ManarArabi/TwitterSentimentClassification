@@ -44,9 +44,9 @@ class preprocessing(object):
         self.test = pd.read_csv('test_tweets_anuFYb8.csv')
         self.combi = self.make_combination(self.train, self.test)
         print("The data is read.")
-        return self.train, self.test, self.combi
+        return self.combi
 
     def visualize_data(self, data):
-        data.head()
+        print(data)
         return
 
