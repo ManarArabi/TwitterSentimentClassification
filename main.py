@@ -16,7 +16,7 @@ def main():
     xtrain, xtest, ytrain, ytest = dataPre.divide_data()
 
     #modeling (BP)
-    my_model = BP()
+    my_model = QDA()
     my_model.train(xtrain, ytrain)
     my_model.test(xtest)
     acc = my_model.get_accuracy(xtest, ytest)

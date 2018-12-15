@@ -1,5 +1,5 @@
 import pandas as pd
-
+import scipy.sparse as sc
 import numpy as np
 from nltk.stem.porter import *
 from sklearn.model_selection import train_test_split
@@ -82,4 +82,5 @@ class preprocessing(object):
         # splitting data into training and validation set
         xtrain, xtest, ytrain, ytest = train_test_split(train_bow, self.train['label'], random_state=42, test_size=0.3)
 
+        #xtrain.scipy.sparse.csr_matrix.toarray()
         return xtrain, xtest, ytrain, ytest
