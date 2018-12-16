@@ -56,9 +56,9 @@ class preprocessing(object):
         print(data)
         return
 
-    def tokenize(self, combi):
-        tokenized = combi['tidy_tweet'].apply(lambda x: x.split())
-        return tokenized
+    def slicing(self, combi):
+        sliced = combi['tidy_tweet'].apply(lambda x: x.split())
+        return sliced
 
     def stemming(self, data):
         stemmer = PorterStemmer()
@@ -68,19 +68,20 @@ class preprocessing(object):
     def process_data(self):
         self.read_data()
         self.combi = self.clean_tweets(self.combi)
-        tokenized = self.tokenize(self.combi)
-        tokenized = self.stemming(tokenized)
-        for i in range(len(tokenized)):
-            tokenized[i] = ' '.join(tokenized[i])
-        self.combi['tidy_tweet'] = tokenized
+        #sliced = self.slicing(self.combi)
+        #sliced = self.stemming(tokenized)
+        #for i in range(len(sliced)):
+        #    sliced[i] = ' '.join(sliced[i])
+        #self.combi['tidy_tweet'] = sliced
         self.features = self.fe.get_bag_of_words(1000, 0.9, 2, self.combi, 'tidy_tweet')
 
     def divide_data(self):
-        train_bow = self.features[:31962, :]
-        test_bow = self.features[31962:, :]
+        train = self.features[:31962, :]
+        test = self.features[31962:, :]
 
         # splitting data into training and validation set
-        xtrain, xtest, ytrain, ytest = train_test_split(train_bow, self.train['label'], random_state=42, test_size=0.3)
+        xtrain, xtest, ytrain, ytest = train_test_split(train, self.train['label'], random_state=42, test_size=0.3)
+        #print("________________")
 
-        #xtrain.scipy.sparse.csr_matrix.toarray()
+
         return xtrain, xtest, ytrain, ytest

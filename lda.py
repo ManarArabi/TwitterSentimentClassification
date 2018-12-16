@@ -16,5 +16,6 @@ class LDA(object):
         return res
 
     def get_accuracy(self, test_data, test_res):
+        print("testing ...")
         acc = self.clf.score(test_data, test_res)
         return acc

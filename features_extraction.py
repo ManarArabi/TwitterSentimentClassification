@@ -1,5 +1,8 @@
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
+import scipy.sparse
+import numpy as np
+
 
 class featureExtraction(object):
     def __init__(self):
@@ -18,7 +21,9 @@ class featureExtraction(object):
         ## max_features build a vocabulary that only consider the top max_features ordered by term frequency across the corpus.
         ## stop_words Terms that were ignored because they either: max_dif or min_dif or max_feature
 
-        bow = bow_vectorizer.fit_transform(data[column_name])
+        bow = bow_vectorizer.fit_transform(data[column_name]).toarray().astype(np.float32)
+
+        #print(type(bow))
         # the output is the word id , number of occurrence , weighting with diminishing importance
         return bow
 
