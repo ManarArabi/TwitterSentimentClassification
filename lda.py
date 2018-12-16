@@ -5,6 +5,7 @@ class LDA(object):
     clf = None
 
     def __init__(self):
+        print("LDA Model")
         self.clf = LinearDiscriminantAnalysis()
 
     def train(self, x, y):

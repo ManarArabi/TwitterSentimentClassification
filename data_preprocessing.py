@@ -3,7 +3,7 @@ import scipy.sparse as sc
 import numpy as np
 from nltk.stem.porter import *
 from sklearn.model_selection import train_test_split
-
+from visualization import VISUAL
 from features_extraction import featureExtraction
 import re
 
@@ -52,8 +52,11 @@ class preprocessing(object):
         self.combi = self.make_combination(self.train, self.test)
         print("The data is read.")
 
-    def visualize_data(self, data):
-        print(data)
+    def visualize_data(self):
+        v = VISUAL(self.combi)
+        print("Visualizing Data")
+        v.visualize_data()
+
         return
 
     def slicing(self, combi):
@@ -68,11 +71,11 @@ class preprocessing(object):
     def process_data(self):
         self.read_data()
         self.combi = self.clean_tweets(self.combi)
-        #sliced = self.slicing(self.combi)
-        #sliced = self.stemming(tokenized)
-        #for i in range(len(sliced)):
-        #    sliced[i] = ' '.join(sliced[i])
-        #self.combi['tidy_tweet'] = sliced
+        sliced = self.slicing(self.combi)
+        sliced = self.stemming(sliced)
+        for i in range(len(sliced)):
+            sliced[i] = ' '.join(sliced[i])
+        self.combi['tidy_tweet'] = sliced
         self.features = self.fe.get_bag_of_words(1000, 0.9, 2, self.combi, 'tidy_tweet')
 
     def divide_data(self):

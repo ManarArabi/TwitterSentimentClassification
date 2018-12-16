@@ -5,6 +5,7 @@ class QDA(object):
     clf = None
 
     def __init__(self):
+        print("QDA Model")
         self.clf = QuadraticDiscriminantAnalysis()
 
     def train(self, x, y):

@@ -7,10 +7,11 @@ import numpy as np
 class featureExtraction(object):
     def __init__(self):
         return
-    
 
     def get_bag_of_words(self, maxi_features, max_freq, min_freq, data, column_name):
         # Count Vectorizer
+        print("feature extracting ..")
+        print("Bag-of-words")
         bow_vectorizer = CountVectorizer(
             max_df=max_freq,
             min_df=min_freq,
@@ -36,7 +37,8 @@ class featureExtraction(object):
             max_features=maxi_features,
             stop_words='english'
         )
-
+        print("feature extracting ..")
+        print("TF_IDF")
         tfidf = tfidf_vectorizer.fit_transform(data[column_name])
 
         return tfidf
