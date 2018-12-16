@@ -23,29 +23,29 @@ def main():
     my_model.train(xtrain, ytrain)
     #my_model.test(xtest)
     acc = my_model.get_accuracy(xtest, ytest)
-    print("testing accuracy : ", "{0:.2f}".format(acc))
-    print("___________________________________________")
+    print("testing accuracy : ", "{0:.4f}".format(acc))
+    print("*********************************************")
     #########################
     my_model = LDA()
     my_model.train(xtrain, ytrain)
     # my_model.test(xtest)
     acc = my_model.get_accuracy(xtest, ytest)
-    print("testing accuracy : ", "{0:.2f}".format(acc))
-    print("___________________________________________")
+    print("testing accuracy : ", "{0:.4f}".format(acc))
+    print("*********************************************")
     #########################
     my_model = QDA()
     my_model.train(xtrain, ytrain)
     # my_model.test(xtest)
     acc = my_model.get_accuracy(xtest, ytest)
-    print("testing accuracy : ", "{0:.2f}".format(acc))
-    print("___________________________________________")
+    print("testing accuracy : ", "{0:.4f}".format(acc))
+    print("*********************************************")
     #########################
     my_model = SVM()
     my_model.train(xtrain, ytrain)
     # my_model.test(xtest)
     acc = my_model.get_accuracy(xtest, ytest)
-    print("testing accuracy : ", "{0:.2f}".format(acc))
-    print("___________________________________________")
+    print("testing accuracy : ", "{0:.4f}".format(acc))
+    print("*********************************************")
     #########################
 
     # Votting classifiers
