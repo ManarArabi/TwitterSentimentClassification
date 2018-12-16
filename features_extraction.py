@@ -7,6 +7,7 @@ import numpy as np
 class featureExtraction(object):
     def __init__(self):
         return
+    
 
     def get_bag_of_words(self, maxi_features, max_freq, min_freq, data, column_name):
         # Count Vectorizer
