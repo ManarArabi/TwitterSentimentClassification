@@ -49,9 +49,9 @@ def main():
     #########################
 
     # Votting classifiers
-    Votting = votting_networks.Votting(xtrain, xtest, ytrain, ytest)
-    res = Votting.votting(1)
-    print("voted " + str(res))
+    #Votting = votting_networks.Votting(xtrain, xtest, ytrain, ytest)
+    #res = Votting.votting(1)
+    #print("voted " + str(res))
 
 if __name__ == "__main__":
     main()
