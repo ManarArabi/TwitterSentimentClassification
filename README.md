@@ -1,11 +1,16 @@
 # TwitterSentimentClassification
 classify tweets to positive or negative tweets.
-##Task
+
+
+## Task
 
 Detecting hate speech in tweets. 
 
-For the sake of simplicity, we say a tweet contains hate speech if it has a racist or sexist sentiment associated with it. So, the task is to classify racist or sexist tweets from other tweets.
-##Solution 
+For the sake of simplicity, we say a tweet contains hate speech if it has a good or bad sentiment associated with it. So, the task is to classify good or bad tweets from other tweets.
+
+
+
+## Solution 
 We choose common Techniques in neural networks field to get the greatest accuracy. 
 
 1. Back Propagation Model (1 hidden layer, 100 neuron)
