@@ -8,6 +8,8 @@ Detecting hate speech in tweets.
 
 For the sake of simplicity, we say a tweet contains hate speech if it has a good or bad sentiment associated with it. So, the task is to classify good or bad tweets from other tweets.
 
+This project was made in association with @wafaa ismail and @Ahmad Kamal
+
 
 
 ## Solution 
