@@ -1,5 +1,5 @@
 # TwitterSentimentClassification
-classify tweets to positive or negative tweets.
+Classify tweets to positive or negative tweets.
 
 
 ## Task
@@ -25,7 +25,7 @@ We choose common Techniques in neural networks field to get the greatest accurac
 
 5. voting between other models (KNN, Gaussian NB, Logistic regression) 
 
-##Steps 
+## Steps 
 
 * Clean Tweets .
     
@@ -37,11 +37,11 @@ We choose common Techniques in neural networks field to get the greatest accurac
     using Bag of words technique or TF-IDF 
 *  Pass input to each model and compare accuracy.
 
-##Result 
+## Result 
 
 Back probagation has the greatest accuracy (0.946).
 
-####notes
+#### notes
 If you aren't familiar with the above networks you should check the links below.
 
 * Back propagation : 
