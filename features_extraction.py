@@ -39,7 +39,7 @@ class featureExtraction(object):
         )
         print("feature extracting ..")
         print("TF_IDF")
-        tfidf = tfidf_vectorizer.fit_transform(data[column_name])
+        tfidf = tfidf_vectorizer.fit_transform(data[column_name]).toarray().astype(np.float32)
 
         return tfidf
 

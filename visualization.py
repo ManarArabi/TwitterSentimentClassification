@@ -43,9 +43,9 @@ class VISUAL(object):
         return negative_words
 
     def visulizeWords(self):
-        self.__commonWord__(self.data)
-        self.__normalWords__(self.data)
-        self.__negativeWords__(self.data)
+        self.__commonWord__()
+        self.__normalWords__()
+        self.__negativeWords__()
 
     def __hashtagExtract__(self, inputText):
         hashtags = []

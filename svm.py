@@ -5,7 +5,7 @@ class SVM(object):
 
     clf = None
 
-    def __init__(self, kernelF = 'rbf'):
+    def __init__(self, kernelF = 'linear'):
         #kernel = {‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’} defualt =rbf
         print("SVM Model")
         self.clf = svm.SVC(gamma='scale', kernel=kernelF)

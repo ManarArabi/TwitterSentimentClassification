@@ -15,37 +15,37 @@ def main():
     xtrain, xtest, ytrain, ytest = dataPre.divide_data()
 
     #visualizing
-    dataPre.visualize_data()
+    #dataPre.visualize_data()
 
     #modeling (BP)
     print("Modeling ...")
-    my_model = BP()
+    my_model = QDA()
     my_model.train(xtrain, ytrain)
     #my_model.test(xtest)
     acc = my_model.get_accuracy(xtest, ytest)
     print("testing accuracy : ", "{0:.4f}".format(acc))
     print("*********************************************")
     #########################
-    my_model = LDA()
-    my_model.train(xtrain, ytrain)
-    # my_model.test(xtest)
-    acc = my_model.get_accuracy(xtest, ytest)
-    print("testing accuracy : ", "{0:.4f}".format(acc))
-    print("*********************************************")
-    #########################
-    my_model = QDA()
-    my_model.train(xtrain, ytrain)
-    # my_model.test(xtest)
-    acc = my_model.get_accuracy(xtest, ytest)
-    print("testing accuracy : ", "{0:.4f}".format(acc))
-    print("*********************************************")
-    #########################
-    my_model = SVM()
-    my_model.train(xtrain, ytrain)
-    # my_model.test(xtest)
-    acc = my_model.get_accuracy(xtest, ytest)
-    print("testing accuracy : ", "{0:.4f}".format(acc))
-    print("*********************************************")
+    # my_model = LDA()
+    # my_model.train(xtrain, ytrain)
+    # # my_model.test(xtest)
+    # acc = my_model.get_accuracy(xtest, ytest)
+    # print("testing accuracy : ", "{0:.4f}".format(acc))
+    # print("*********************************************")
+    # #########################
+    # my_model = QDA()
+    # my_model.train(xtrain, ytrain)
+    # # my_model.test(xtest)
+    # acc = my_model.get_accuracy(xtest, ytest)
+    # print("testing accuracy : ", "{0:.4f}".format(acc))
+    # print("*********************************************")
+    # #########################
+    # my_model = SVM()
+    # my_model.train(xtrain, ytrain)
+    # # my_model.test(xtest)
+    # acc = my_model.get_accuracy(xtest, ytest)
+    # print("testing accuracy : ", "{0:.4f}".format(acc))
+    # print("*********************************************")
     #########################
 
     # Votting classifiers

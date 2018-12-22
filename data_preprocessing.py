@@ -83,7 +83,7 @@ class preprocessing(object):
         test = self.features[31962:, :]
 
         # splitting data into training and validation set
-        xtrain, xtest, ytrain, ytest = train_test_split(train, self.train['label'], random_state=42, test_size=0.3)
+        xtrain, xtest, ytrain, ytest = train_test_split(train, self.train['label'], random_state=42, test_size=0.4)
         #print("________________")
 
 

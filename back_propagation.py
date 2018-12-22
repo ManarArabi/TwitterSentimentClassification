@@ -5,13 +5,13 @@ class BP(object):
 
     clf = None
 
-    def __init__(self, activationF = 'identity'):
+    def __init__(self, activationF = 'tanh'):
         #solver = {‘lbfgs’, ‘sgd’, ‘adam’}
         #activationF = {‘identity’, ‘logistic’, ‘tanh’}
         #default is : 100 neuron with one hidden layer
         #to change : hidden_layer_sizes=(5, 2)
         print("Back propagation Model")
-        self.clf = MLPClassifier(solver='lbfgs', activation=activationF)
+        self.clf = MLPClassifier(solver='sgd', activation=activationF, learning_rate='adaptive')
 
 
     def train(self, x, y):
